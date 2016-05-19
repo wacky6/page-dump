@@ -1,0 +1,30 @@
+{
+  "name": "page-dump",
+  "version": "0.1.0",
+  "description": "Simulate and dump web page's requests and responses",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wacky6/page-dump.git"
+  },
+  "keywords": [
+    "dump"
+  ],
+  "author": "wacky6",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wacky6/page-dump/issues"
+  },
+  "homepage": "https://github.com/wacky6/page-dump#readme",
+  "dependencies": {
+    "co": "^4.6.0",
+    "commander": "^2.9.0",
+    "json5": "^0.5.0"
+  }
+}
