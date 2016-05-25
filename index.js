@@ -11,10 +11,10 @@ module.exports = (url, {cipherScan=true}={}) => co(function*(){
     result.html = html
     result.screenshot = screenshot
 
-    let landingPage = rr.find( ($)=>!$.redirect || $.error )
+    let landingPage = rr.find( ($)=>(!$.redirect) )
 
     if (!landingPage.status)
-        throw new Error('Can not open url: '+url)
+        throw new Error('Can not open url: '+url+', code: '+landingPage.error)
 
     if (cipherScan && landingPage.url.startsWith('https:') )
         result.ciphers = yield require('./lib/cipher-scan')(url)
