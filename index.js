@@ -3,7 +3,7 @@
 const co = require('co')
 
 /* returns Promise */
-module.exports = (url, {cipherScan=true}={}) => co(function*(){
+module.exports = (url, {cipherScan=false}={}) => co(function*(){
     let result = {}
 
     let {rr, html, screenshot} = yield require('./lib/dump')(url)
